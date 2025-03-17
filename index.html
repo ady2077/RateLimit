@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RateLimit - Click Limiter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-layer cube-layer"></div>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="tab-header">
+            <div class="tab-segment left">Rate</div>
+            <div class="tab-segment center">Limit</div>
+            <div class="tab-segment right"></div>
+        </div>
+        <div class="tab-content">
+            <p>Test your click speed! (Limit: 5 clicks/s)</p>
+            <button onclick="handleClick()">Click Me!</button>
+            <div id="message" class="message"></div>
+            <div class="stats">
+                <div>Clicks: <span id="clickCount">0</span></div>
+                <div>Rate: <span id="clickRate">0</span> clicks/s</div>
+                <div>Cooldown: <span id="cooldown">0s</span></div>
+            </div>
+            <div class="graph">
+                <h3>Click Rate Graph</h3>
+                <canvas id="rateGraph" width="300" height="100"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
